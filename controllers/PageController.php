@@ -7,7 +7,7 @@ use yii\web\Controller;
 /**
  * View controller
  */
-class ViewController extends Controller
+class PageController extends Controller
 {
 
     /**
@@ -15,9 +15,9 @@ class ViewController extends Controller
      *
      * @return mixed
      */
-    public function actionDefault($page)
+    public function actionView($page)
     {
-        return $this->render('/view', [
+        return $this->render('view', [
             'page' => $page
         ]);
     }

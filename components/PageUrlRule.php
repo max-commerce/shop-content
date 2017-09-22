@@ -19,7 +19,7 @@ class PageUrlRule extends Object implements UrlRuleInterface
         $pathInfo = $request->getPathInfo();
         
         if ($page = Page::find()->where(['alias' => $pathInfo])->one()) {
-            return ['page/view/default', ['page' => $page]];
+            return ['content/page/view', ['page' => $page]];
         }
 
         
