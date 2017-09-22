@@ -7,7 +7,7 @@
     "repositories": [
         {
             "type": "git",
-            "url":  "https://github.com/max-commerce/shop-content.git"
+            "url":  "https://github.com/max-commerce/shop-core.git"
         }
     ],
     "require": {
