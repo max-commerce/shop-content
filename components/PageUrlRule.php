@@ -18,8 +18,12 @@ class PageUrlRule extends Object implements UrlRuleInterface
     {
         $pathInfo = $request->getPathInfo();
         
-        if ($page = Page::find()->where(['alias' => $pathInfo])->one()) {
-            return ['content/page/view', ['page' => $page]];
+        // проверка на главную страницу (пустой alias)
+        if (!empty($pathInfo)) {
+
+            if ($page = Page::find()->where(['alias' => $pathInfo])->one()) {
+                return ['content/page/view', ['page' => $page]];
+            }
         }
 
         
