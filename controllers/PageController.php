@@ -3,6 +3,7 @@
 namespace maxcom\content\controllers;
 
 use yii\web\Controller;
+use yii\base\ViewNotFoundException;
 
 /**
  * View controller
@@ -17,8 +18,17 @@ class PageController extends Controller
      */
     public function actionView($page)
     {
-        return $this->render('view', [
+        $params = [
             'page' => $page
-        ]);
+        ];
+        try
+        {
+            return $this->render('view--' . $page->alias, $params);
+        }
+        catch (ViewNotFoundException $e)
+        {
+            return $this->render('view', $params);
+        }
+
     }
 }
