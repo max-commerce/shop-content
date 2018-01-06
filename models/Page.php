@@ -16,7 +16,7 @@ class Page extends \yii\db\ActiveRecord
     		// maxcommerce v.2 implementation
 			return 'pages';
     	} else {
-    		throw new ErrorException("Can't find `pages` table");
+    		throw new \yii\base\ErrorException("Can't find `pages` table");
     	}
     }
 
