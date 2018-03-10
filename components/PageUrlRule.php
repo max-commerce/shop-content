@@ -3,10 +3,10 @@
 namespace maxcom\content\components;
 
 use yii\web\UrlRuleInterface;
-use yii\base\Object;
+use yii\base\BaseObject;
 use maxcom\content\models\Page;
 
-class PageUrlRule extends Object implements UrlRuleInterface
+class PageUrlRule extends BaseObject implements UrlRuleInterface
 {
 
     public function createUrl($manager, $route, $params)
