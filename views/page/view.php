@@ -13,12 +13,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
 	    <div class="col-lg-9">
-		    <div class="panel panel-default">
-			    <div class="panel-body">
-				    <div class="page-content">
-						<?= $page->text ?>
-				    </div>
-		    	</div>
+		    <div class="page-content">
+				<?= $page->text ?>
 		    </div>
 		</div>
 		<div class="col-lg-3">
