@@ -15,4 +15,9 @@ class MenuItem extends \yii\db\ActiveRecord
     {
         return $this->url == '/' ? '/' : '/' . $this->url;
     }
+
+    public static function find()
+    {
+    	return new MenuItemQuery(get_called_class());
+    }
 }
